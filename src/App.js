@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import './assets/css/App.css';
+// import Home from './compnents/home/Home'
+// import News from './compnents/news/News'
+// import Events from './compnents/events/Events'
+// import List from './compnents/list/List'
+import TodoList from './compnents/todoList/TodoList'
 class App extends Component {
+  // render 里面放的是模板 jsx
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>hellow react,跟组件</h1>
+        {/* <Home></Home> */}
+        {/* <News></News> */}
+        {/* <Events></Events> */}
+        {/* <List></List> */}
+        <TodoList></TodoList>
       </div>
     );
   }
