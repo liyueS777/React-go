@@ -4,7 +4,7 @@ import './assets/css/App.css';
 // import News from './compnents/news/News'
 // import Events from './compnents/events/Events'
 // import List from './compnents/list/List'
-import TodoList from './compnents/todoList/TodoList'
+import TodoList from './compnents/todoList/TodoList2'
 class App extends Component {
   // render 里面放的是模板 jsx
   render() {
