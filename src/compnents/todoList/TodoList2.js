@@ -59,7 +59,11 @@ class ToDoList2 extends React.Component {
         this.refs.Footer.run(1);
     }
     componentDidMount(){
-        getCompany({activityId:1})
+        getLogoHot({
+            activityId:1,
+            pageNum:1,
+            pageSize:2
+        })
         .then(res=>{
             console.log(res)
         })

@@ -15,6 +15,10 @@ import '../../assets/css/home.css';
             }
         }
     }//绑定属性要注意
+
+    componentDidMount(){
+        console.log('dom加载完毕',this.props)
+    }
     render(){
         return (
            <div className="home">

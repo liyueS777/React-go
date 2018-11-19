@@ -32,4 +32,24 @@ instance.interceptors.response.use(function(response){
     return Promise.reject(error);
   })
 
-  export default instance
+  export default function (method, url, params) {
+    return new Promise((resolve, reject) => {
+      // if (params) {
+      //   params = qs.stringify(params)
+      // }
+      axios({
+        method: method,
+        url: url,
+        data: method === 'POST' || method === 'PUT' ? params : null,
+        params: method === 'GET' || method === 'DELETE' ? params : null
+      })
+      .then(response => {
+        resolve(response.data)
+      }, err => {
+        reject(err)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+    })
+  }
