@@ -13,7 +13,7 @@ class User extends React.Component {
         };
     }
     componentDidMount() {
-        console.log(this.props)
+        console.log('User',this.props)
     }
     toggle = () => {
         this.setState({
@@ -35,19 +35,25 @@ class User extends React.Component {
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1">
-                        <Icon type="user" />
-                        <span>
-                            <Link to="/user">user</Link>
-                            <Switch defaultChecked onChange={this.onChange} />
-                        </span>
+                            <Link to="/user">
+                                <Icon type="user" className="floder" />
+                                    <span>user
+                                        {/* <Switch defaultChecked onChange={this.onChange} /> */}
+                                    </span>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="2">
-                        <Icon type="video-camera" />
-                        <span><Link to='/user/userAdd'>userAdd</Link></span>
+                            <Link to='/user/userAdd'>
+                                <Icon type="video-camera" />
+                                <span>userAdd</span>
+                            </Link>
                         </Menu.Item>
+                            
                         <Menu.Item key="3">
-                        <Icon type="upload" />
-                        <span><Link to='/user/userDetail'>userDetail</Link></span>
+                            <Link to='/user/userDetail'>
+                                <Icon type="upload" />
+                                <span>userDetail</span>
+                            </Link>
                         </Menu.Item>
                     </Menu>
                     </Sider>

@@ -4,6 +4,9 @@ class Home extends React.Component {
         super(props);
         this.state = {  };
     }
+    componentWillMount(){
+        console.log('home:',this.props)
+    }
     render() {
         return (
             <div>这里是Home组件</div>
