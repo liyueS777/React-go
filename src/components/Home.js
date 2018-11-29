@@ -7,9 +7,15 @@ class Home extends React.Component {
     componentWillMount(){
         console.log('home:',this.props)
     }
+    goUser = () =>{
+        this.props.history.push({
+            pathname:'/user',
+            search:"?a=2"
+        })
+    }
     render() {
         return (
-            <div>这里是Home组件</div>
+            <div onClick={this.goUser}>这里是Home组件</div>
         );
     }
 }
